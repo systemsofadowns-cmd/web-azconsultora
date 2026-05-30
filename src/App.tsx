@@ -12,7 +12,7 @@ import {
   Shield, 
   Globe, 
   DollarSign, 
-  Check,
+  Check, 
   Briefcase, 
   Clock, 
   UserCheck, 
