@@ -188,13 +188,13 @@ export default function App() {
       const text = encodeURIComponent(
         `Hola AZConsultora, mi nombre es ${formData.name}. Estoy interesado en el servicio de: ${formData.serviceRequested}. Correo: ${formData.email}. Mensaje: ${formData.message}`
       );
-      window.location.href = `https://wa.me/595991250018?text=${text}`;
+      window.location.href = `https://wa.me/595991857037?text=${text}`;
       setFormSubmitted(false);
     }, 1200);
   };
 
-  const formattedPhone = "+595 991 250018";
-  const whatsappLink = "https://wa.me/595991250018";
+  const formattedPhone = "+595 991 857 037";
+  const whatsappLink = "https://wa.me/595991857037";
 
   // Data for the 'Por qué elegir Paraguay?' cards
   const whyParaguayCards = [
@@ -2102,8 +2102,8 @@ export default function App() {
                   <div className="flex-1">
                     <span className="text-slate-400 block uppercase text-[10px] tracking-wider">Teléfono de Enlace Directo</span>
                     <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-0.5">
-                      <a href="tel:+595991250018" className="text-white font-mono font-bold text-base hover:text-amber-300 transition-colors hover:underline">
-                        +595 991 250018
+                      <a href="tel:+595991857037" className="text-white font-mono font-bold text-base hover:text-amber-300 transition-colors hover:underline">
+                        +595 991 857 037
                       </a>
                       <a href={whatsappLink} target="_blank" rel="noreferrer" className="text-emerald-400 text-[11px] font-bold uppercase tracking-wider flex items-center space-x-1.5 hover:text-emerald-300 transition-colors">
                         <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block"></span>
