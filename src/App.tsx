@@ -36,7 +36,8 @@ import {
   Calendar,
   Share2,
   Copy,
-  Link
+  Link,
+  Mail
 } from 'lucide-react';
 
 // @ts-ignore
@@ -195,6 +196,7 @@ export default function App() {
 
   const formattedPhone = "+595 991 857 037";
   const whatsappLink = "https://wa.me/595991857037";
+  const contactEmail = "info@consultoraz.com.py";
 
   // Data for the 'Por qué elegir Paraguay?' cards
   const whyParaguayCards = [
@@ -2132,6 +2134,47 @@ export default function App() {
                     </span>
                   </div>
                 </div>
+
+                <div className="flex items-center space-x-3 bg-slate-900 p-4 rounded-xl border border-slate-800">
+                  <Mail className="w-5 h-5 text-amber-400 shrink-0" />
+                  <div>
+                    <span className="text-slate-400 block uppercase text-[10px] tracking-wider">Correo Electrónico Oficial</span>
+                    <a href={`mailto:${contactEmail}`} className="text-white font-mono font-semibold text-xs hover:text-amber-300 transition-colors hover:underline">
+                      {contactEmail}
+                    </a>
+                  </div>
+                </div>
+
+                {/* Elegant Interactive Google Map for central office */}
+                <div className="mt-4 overflow-hidden rounded-xl border border-slate-800 bg-slate-900 shadow-xl">
+                  <div className="p-3 bg-slate-900/80 border-b border-slate-800 flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-wider text-amber-400 font-bold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                      Mapa de Oficina Central
+                    </span>
+                    <a 
+                      href="https://maps.google.com/?q=Cerro+Cora+247,+Edificio+Alfal+I,+Asuncion,+Paraguay" 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="text-[10px] font-bold text-slate-300 hover:text-amber-400 transition-colors flex items-center gap-1 bg-slate-950 px-2 py-1 rounded border border-slate-800"
+                    >
+                      <span>Ver mapa ampliado</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+                  <div className="relative w-full h-[180px] sm:h-[220px]">
+                    <iframe
+                      src="https://maps.google.com/maps?q=Cerro%20Cora%20247,%20Edificio%20Alfal%20I,%20Asuncion,%20Paraguay&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0, filter: "grayscale(1) invert(0.92) contrast(1.15)" }}
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Ubicación de AZConsultora"
+                    ></iframe>
+                  </div>
+                </div>
               </div>
 
               <div className="bg-slate-900/40 p-4 rounded-xl border border-slate-800 text-xs">
@@ -2274,10 +2317,14 @@ export default function App() {
             <p className="text-[11px] leading-relaxed">
               Asesoramiento corporativo integral y trámites de radicación paraguaya de primer nivel con más de 50 años de experiencia comercial y discreción técnica.
             </p>
-            <div className="flex items-center space-x-3 text-slate-300">
-              <a href={whatsappLink} target="_blank" rel="noreferrer" className="p-2.5 bg-slate-900 border border-slate-800 rounded-xl hover:border-emerald-500/40 hover:bg-slate-900 text-slate-300 hover:text-emerald-400 transition-all flex items-center gap-2 shadow-sm">
+            <div className="flex flex-col gap-2.5 text-slate-300">
+              <a href={whatsappLink} target="_blank" rel="noreferrer" className="p-2.5 bg-slate-900 border border-slate-800 rounded-xl hover:border-emerald-500/40 hover:bg-slate-900 text-slate-300 hover:text-emerald-400 transition-all flex items-center gap-2 shadow-sm w-full">
                 <Phone className="w-4 h-4 text-amber-400 shrink-0" />
                 <span className="font-mono text-xs font-bold">{formattedPhone}</span>
+              </a>
+              <a href={`mailto:${contactEmail}`} className="p-2.5 bg-slate-900 border border-slate-800 rounded-xl hover:border-amber-500/40 hover:bg-slate-900 text-slate-300 hover:text-amber-400 transition-all flex items-center gap-2 shadow-sm w-full">
+                <Mail className="w-4 h-4 text-amber-400 shrink-0" />
+                <span className="font-mono text-xs font-semibold">{contactEmail}</span>
               </a>
             </div>
           </div>
