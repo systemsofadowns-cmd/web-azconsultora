@@ -196,7 +196,7 @@ export default function App() {
 
   const formattedPhone = "+595 991 857 037";
   const whatsappLink = "https://wa.me/595991857037";
-  const contactEmail = "info@consultoraz.com.py";
+  const contactEmail = "alicia.zarate.gestion@gmail.com";
 
   // Data for the 'Por qué elegir Paraguay?' cards
   const whyParaguayCards = [
